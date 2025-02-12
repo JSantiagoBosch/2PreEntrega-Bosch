@@ -28,6 +28,7 @@ class ProductManager {
     }
 
     addProduct(product) {
+        this.loadProducts();
         let newProduct = {id:this.getId(), ...product};
         this.products.push(newProduct);
         this.saveProducts();
@@ -65,6 +66,20 @@ class ProductManager {
             fs.writeFileSync(this.file, JSON.stringify(this.products, null, 2));
         } catch (error) {
             console.error("Error al guardar productos:", error);
+        }
+    }
+
+    loadProducts() {
+        try {
+            if (fs.existsSync(this.file)) {
+                const data = fs.readFileSync(this.file, "utf-8");
+                this.products = JSON.parse(data);
+            } else {
+                this.products = [];
+            }
+        } catch (error) {
+            console.error("Error al cargar productos:", error);
+            this.products = [];
         }
     }
 }

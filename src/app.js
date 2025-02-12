@@ -29,11 +29,35 @@ app.use("/api/products", productsRouter);
 app.use("/api/carts", cartsRouter);
 app.use("/", viewsRouter);
 
-const PM = new ProductManager();
-const products = PM.getProducts();
 
 ioServer.on("connection", socket => {
-
-
+    
+    const PM = new ProductManager();
+    
+    const products = PM.getProducts();
     socket.emit("realtimeproducts", products);
+
+
+    socket.on("nuevoProducto", data => {
+
+        const procduct = {title: data.title, description: data.description, code: data.code, price: data.price, category: data.category, thumbnails: [data.image], quantity: data.quantity}
+        
+        PM.addProduct(data);
+
+        console.log("Se agrego un producto");
+
+        const products = PM.getProducts();
+        socket.emit("realtimeproducts", products);
+    })
+
+    socket.on("eliminarProducto", data => {
+        
+        PM.deleteProduct(data);
+
+        console.log("Se elimino un producto");
+        
+        const products = PM.getProducts();
+        socket.emit("realtimeproducts", products);
+    })
+
 })
