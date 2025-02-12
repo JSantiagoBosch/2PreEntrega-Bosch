@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "Lager",
+    "description": "Cerveza rubia, de una intensidad suave, muy facil de tomar",
+    "code": "Cerveza1",
+    "price": 2500,
+    "quantity": 10,
+    "status": true,
+    "category": "Lager",
+    "thumbnails": [
+      "https://media.istockphoto.com/id/453744721/es/foto/vaso-de-cerveza.jpg?s=612x612&w=0&k=20&c=TiMS4g7qTo8V_6RiScxWm7o6YrDlTVbb-supe2hNwFU="
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Pilsen",
+    "description": "Cerveza rubia, de una intensidad suave, muy facil de tomar",
+    "code": "Cerveza1",
+    "price": 950,
+    "quantity": 1,
+    "status": true,
+    "category": "Lager",
+    "thumbnails": [
+      "https://media.istockphoto.com/id/1142253687/es/foto/cerveza-espumosa-en-vidrio-de-jard%C3%ADn.jpg?s=2048x2048&w=is&k=20&c=5hR6BRcAsHWO9_6iN8w8PP37dxwlOtFyw8eizdZVbL8="
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Guiness",
+    "description": "Cerveza rubia, de una intensidad suave, muy facil de tomar",
+    "code": "Cerveza1",
+    "price": 3500,
+    "quantity": 4,
+    "status": true,
+    "category": "Lager",
+    "thumbnails": [
+      "https://media.istockphoto.com/id/458646129/es/foto/cerveza-de-guinness.jpg?s=2048x2048&w=is&k=20&c=AxHONhYEvSHjzSZsfZBPhML3rKKRg8uRwDF4Jchb9L0="
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Amber",
+    "description": "Cerveza rubia, de una intensidad suave, muy facil de tomar",
+    "code": "Cerveza1",
+    "price": 1950,
+    "quantity": 8,
+    "status": true,
+    "category": "Lager",
+    "thumbnails": [
+      "https://media.istockphoto.com/id/1292244821/es/foto/vidrio-de-cerveza-negra-roja-aislada-sobre-un-blanco.jpg?s=612x612&w=0&k=20&c=77yDvs0l732_B_EQQDE9w5QUfZ0LlRf8jTdfcPhgu8g="
+    ]
+  } 
+]
