@@ -40,9 +40,18 @@ ioServer.on("connection", socket => {
 
     socket.on("nuevoProducto", data => {
 
-        const procduct = {title: data.title, description: data.description, code: data.code, price: data.price, category: data.category, thumbnails: [data.image], quantity: data.quantity}
+        const product = {
+            title: data.title, 
+            description: data.description, 
+            code: data.code, 
+            price: data.price, 
+            status: true,
+            category: data.category, 
+            thumbnails: [data.image], 
+            quantity: data.quantity
+        }
         
-        PM.addProduct(data);
+        PM.addProduct(product);
 
         console.log("Se agrego un producto");
 

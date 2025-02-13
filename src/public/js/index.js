@@ -5,7 +5,6 @@ socket.on("realtimeproducts", data => {
     limpiarSelectEliminarProd();
     
     let containerHTML = "";
-    const productId = document.getElementById("product_id")
 
     data.forEach(item => {
         containerHTML += `<div class="col-md-3">
@@ -26,15 +25,15 @@ socket.on("realtimeproducts", data => {
 })
 
 const agregarProducto = () => {
-    const title = document.getElementById("title").value;
-    const description = document.getElementById("description").value;
-    const code = document.getElementById("code").value;
-    const price = document.getElementById("price").value;
-    const category = document.getElementById("category").value;
-    const image = document.getElementById("image").value;
-    const quantity = document.getElementById("quantity").value;
+    const title = document.getElementById("title");
+    const description = document.getElementById("description");
+    const code = document.getElementById("code");
+    const price = document.getElementById("price");
+    const category = document.getElementById("category");
+    const image = document.getElementById("image");
+    const quantity = document.getElementById("quantity");
 
-    const product = { title, description, code, price, category, image, quantity }
+    const product = { title: title.value, description: description.value, code: code.value, price: price.value, category: category.value, image: image.value, quantity: quantity.value }
 
     socket.emit("nuevoProducto", product);
 

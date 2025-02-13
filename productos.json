@@ -10,7 +10,8 @@
     "thumbnails": [
       "https://cibart.com.ar/wp-content/uploads/2020/05/277-KIT-DE-INSUMOS-ESTILO-GOLDEN-ALE-600x600.jpg",
       "https://i0.wp.com/cervecing.es/wp-content/uploads/german-pilsner.jpeg?resize=768%2C480&ssl=1"
-    ]
+    ],
+    "quantity": "10"
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "thumbnails": [
       "https://cibart.com.ar/wp-content/uploads/2020/05/273-KIT-DE-INSUMOS-ESTILO-PILSEN.jpg",
       "https://i0.wp.com/cervecing.es/wp-content/uploads/german-pilsner.jpeg?resize=768%2C480&ssl=1"
-    ]
+    ],
+    "quantity": "10"
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "thumbnails": [
       "https://cibart.com.ar/wp-content/uploads/2020/05/530-KIT-DE-INSUMOS-ESTILO-AMERICAN-IPA.jpg",
       "https://i0.wp.com/cervecing.es/wp-content/uploads/german-pilsner.jpeg?resize=768%2C480&ssl=1"
-    ]
+    ],
+    "quantity": "10"
   },
   {
     "id": 4,
@@ -49,6 +52,21 @@
     "thumbnails": [
       "https://cibart.com.ar/wp-content/uploads/2020/05/271-KIT-DE-INSUMOS-ESTILO-NEGRA-DEL-SUR-600x600.jpg",
       "https://i0.wp.com/cervecing.es/wp-content/uploads/german-pilsner.jpeg?resize=768%2C480&ssl=1"
-    ]
+    ],
+    "quantity": "10"
+  },
+  {
+    "id": 5,
+    "title": "American APA",
+    "description": "Cerveza Americana APA",
+    "code": "cerveza5",
+    "price": "2400",
+    "status": true,
+    "category": "Lager",
+    "thumbnails": [
+      "https://cibart.com.ar/wp-content/uploads/2020/05/529-KIT-DE-INSUMOS-ESTILO-AMERICAN-PALE-ALE-APA-600x837.jpg",
+      "https://i0.wp.com/cervecing.es/wp-content/uploads/german-pilsner.jpeg?resize=768%2C480&ssl=1"
+    ],
+    "quantity": "10"
   }
 ]
