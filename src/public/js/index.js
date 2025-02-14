@@ -25,17 +25,30 @@ socket.on("realtimeproducts", data => {
 })
 
 const agregarProducto = () => {
-    const title = document.getElementById("title");
-    const description = document.getElementById("description");
-    const code = document.getElementById("code");
-    const price = document.getElementById("price");
-    const category = document.getElementById("category");
-    const image = document.getElementById("image");
-    const quantity = document.getElementById("quantity");
+    const title = document.getElementById("title").value.trim();
+    const description = document.getElementById("description").value.trim();
+    const code = document.getElementById("code").value.trim();
+    const price = document.getElementById("price").value.trim();
+    const category = document.getElementById("category").value.trim();
+    const image = document.getElementById("image").value.trim();
+    const quantity = document.getElementById("quantity").value.trim();
 
-    const product = { title: title.value, description: description.value, code: code.value, price: price.value, category: category.value, image: image.value, quantity: quantity.value }
+    if (!title || !description || !code || !price || !category || !quantity) {
+        document.getElementById("producto_estado1").innerHTML = `
+            <div class="alert alert-danger" role="alert">
+                Todos los campos son obligatorios, excepto la imagen.
+            </div>`;
+        return;
+    }
+
+    const product = { title, description, code, price, category, image, quantity}
 
     socket.emit("nuevoProducto", product);
+    
+    document.getElementById("producto_estadoo1").innerHTML = `
+    div class="alert alert-success" role="alert">
+        El producto se agrego correctamente!
+    </div>`;
 
     title.value = "";
     description.value = "";
@@ -44,12 +57,6 @@ const agregarProducto = () => {
     category.value = "";
     image.value = "";
     quantity.value = "";
-
-    document.getElementById("producto_estadoo1").innerHTML = `
-    div class="alert alert-success" role="alert">
-        El producto se agrego correctamente!
-    </div>`;
-
 }
 
 const eliminarProducto = () => {

@@ -40,6 +40,13 @@ ioServer.on("connection", socket => {
 
     socket.on("nuevoProducto", data => {
 
+        const { title, description, code, price, category, quantity } = data;
+
+    if (!title || !description || !code || !price || !category || !quantity) {
+        socket.emit("error", { message: "Todos los campos son obligatorios, excepto la imagen." });
+        return;
+    }
+
         const product = {
             title: data.title, 
             description: data.description, 
